@@ -4,3 +4,10 @@
   color: black;
   font-size: 29px;
 }
+
+h2 {
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}

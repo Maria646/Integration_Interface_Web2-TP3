@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <header class="header bg-black">
+    <header class="header">
       <div class="antialiased">
         <div class="w-full">
           <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -25,10 +25,10 @@
               </button>
             </div>
             <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Acceuil</a>
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">À propos</a>
-              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Acceuil</a>
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="portfolio.html">Portfolio</a>
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="apropos.html">À propos</a>
+              <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="contact.html">Contact</a>
               <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200">
                 <i class="fab fa-github"></i>
               </button> 
@@ -38,115 +38,37 @@
       </div>
     </header>
 
-  <section class="banner bg-black min-h-screen flex justify-center items-center">
-    <div class="container__banner container-fuild grid grid-cols-2 border border-red-500 max-w-6xl h-96 mr-auto ml-auto justify-center items-center">
-      <div class="container__banner-text col-span-2 sm:col-span-1 border border-cyan-500 h-96">
-        <h4 class="mb-7">Je me nomme Mariama Diaby</h4>
-        <h2 class="mb-7">Je suis développeur front-end junior</h2>
-        <button>Portfolio</button>
-        <button>Contact</button>
+    <section class="banner min-h-screen flex justify-center items-center"> 
+      <div class="container__banner container-fuild grid grid-cols-2 border border-red-500 max-w-6xl h-auto mr-auto ml-auto justify-center items-center">
+        <div class="container__banner-text col-span-2 sm:col-span-1 border border-cyan-500 h-96">
+          <h4 class="mb-7">Je me nomme Mariama Diaby</h4>
+          <h2 class="mb-7">Je suis développeur front-end junior</h2>
+          <button>Portfolio</button>
+          <button>Contact</button>
+        </div>
+        <div class="container__banner-photo col-span-2 sm:col-span-1 border border-blue-500 h-96">
+          <img src="https://images.pexels.com/photos/17986132/pexels-photo-17986132/free-photo-of-aube-soleil-couchant-femme-lever-de-soleil.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image">
+        </div>
       </div>
-      <div class="container__banner-photo col-span-2 sm:col-span-1 border border-blue-500 h-96">
-        <img src="your-image-source.jpg" alt="Image">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="galerie">
-    <div class="container__galerie mx-auto p-4">
-      <div class="grille__galerie grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="containerImageOne__galerie grid gap-4">
-          <div>
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://upload.wikimedia.org/wikipedia/commons/0/03/Kashi_Vishwanath_Temple_Banaras.jpg"
-              alt=""
-            />
-          </div>
-          <div class="containerImageTwo__galerie">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://pbs.twimg.com/media/FGRnUzPVEAAbqM8?format=jpg&name=large"
-              alt=""
-            />
-          </div>
-          <div class="containerImageThree__galerie">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://pbs.twimg.com/media/FGRnNpAVUAYqRYv?format=jpg&name=large"
-              alt=""
-            />
-          </div>
+      <section class="portfolio h-screen flex items-center w-full bg-cover bg-center py-32 hover:bg-black-600" style="background-image: url('https://source.unsplash.com/random');">
+        <div class="container__portfolio mx-auto text-center text-white">
+          <h2>Portfolio</h2>
+          <!-- <a href="#" class="bg-indigo-500 text-white py-4 px-12 rounded-full hover:bg-indigo-600">Portfolio</a> -->
         </div>
-        <div class="containerImageFour__galerie grid gap-4">
-          <div>
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://pbs.twimg.com/media/FGRnP_TUUAAttG3?format=jpg&name=large"
-              alt=""
-            />
-          </div>
-          <div class="containerImageFive__galerie">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://i.pinimg.com/originals/c0/7d/17/c07d17d7ca0b9f39f5aded4b6dca8f02.jpg"
-              alt=""
-            />
-          </div>
-          <div class="containerImageSix__galerie">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Benares-_The_Golden_Temple%2C_India%2C_ca._1915_%28IMP-CSCNWW33-OS14-66%29.jpg/1280px-Benares-_The_Golden_Temple%2C_India%2C_ca._1915_%28IMP-CSCNWW33-OS14-66%29.jpg"
-              alt=""
-            />
-          </div>
+      </section>
+
+  <section class="apropos min-h-screen flex justify-center items-center"> 
+    <div class="container__apropos container-fuild grid grid-cols-2 border border-red-500 max-w-6xl h-auto mr-auto ml-auto justify-center items-center">
+        <div class="containerImage__apropos col-span-2 sm:col-span-1 border border-blue-500 h-96 flex justify-center items-center">
+          <!-- <img src="https://images.pexels.com/photos/17986132/pexels-photo-17986132/free-photo-of-aube-soleil-couchant-femme-lever-de-soleil.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image"> -->
+          <h2>À propos</h2>
         </div>
-        <div class="containerImageSeven__galerie grid gap-4">
-          <div>
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://www.jagranimages.com/images/newimg/27072020/27_07_2020-shri-kashi-vishwanath-temple_20557350.jpg"
-              alt=""
-            />
-          </div>
-          <div class="containerImageHeight__galerie grid gap-4">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://www.jansatta.com/wp-content/uploads/2021/12/Kashi-Vishwanath-Mandir.png?w=1024"
-              alt=""
-            />
-          </div>
-          <div class="containerImageNine__galerie grid gap-4">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://staticimg.amarujala.com/assets/images/2021/11/07/750x506/kashi-vishwanath-dham_1636258507.jpeg?w=674&dpr=1.0"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="containerImageTeen__galerie grid gap-4">
-          <div>
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://staticimg.amarujala.com/assets/images/2020/01/13/750x506/kashi-vishwanath-mandir-varanasi_1578924152.png?w=700&dpr=2.0"
-              alt=""
-            />
-          </div>
-          <div class="containerImageLeveen__galerie">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg/800px-Ahilya_Ghat_by_the_Ganges%2C_Varanasi.jpg"
-              alt=""
-            />
-          </div>
-          <div class="containerImageThouelve__galerie">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="https://upload.wikimedia.org/wikipedia/commons/2/25/Chet_Singh_Ghat_in_Varanasi.jpg"
-              alt=""
-            />
-          </div>
-        </div>
+        <div class="containerText__apropos col-span-2 sm:col-span-1 border border-cyan-500 h-96 mt-11 mb-11">
+          <p class="mt-11 mb-11">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur harum, blanditiis earum nisi ab eaque placeat delectus vel debitis, dicta laboriosam explicabo, minima provident sapiente modi eligendi sint nihil!</p>
+          <button class="mt-11 mb-11">En savoir plus sur moi !</button>
+          <button class="mt-11 mb-11">Contact</button>
       </div>
     </div>
   </section>
