@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/css/style.css">
   <link rel="stylesheet" href="./style/css/pageAcceuil.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +17,7 @@
         <div class="w-full">
           <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="flex flex-row items-center justify-between p-4">
-              <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Logo</a>
+              <a href="#" class="text-lg font-semibold tracking-widest uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Logo</a>
               <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                   <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -39,20 +40,20 @@
     </header>
 
     <section class="banner min-h-screen flex justify-center items-center"> 
-      <div class="container__banner container-fuild grid grid-cols-2 border border-red-500 max-w-6xl h-auto mr-auto ml-auto justify-center items-center">
-        <div class="container__banner-text col-span-2 sm:col-span-1 border border-cyan-500 h-96">
+      <div class="container__banner container-fuild grid grid-cols-2 max-w-6xl h-auto mr-auto ml-auto justify-center items-center">
+        <div class="container__banner-text col-span-2 sm:col-span-1 h-96">
           <h4 class="mb-7">Je me nomme Mariama Diaby</h4>
           <h2 class="mb-7">Je suis développeur front-end junior</h2>
           <button>Portfolio</button>
           <button>Contact</button>
         </div>
-        <div class="container__banner-photo col-span-2 sm:col-span-1 border border-blue-500 h-96">
+        <div class="container__banner-photo col-span-2 sm:col-span-1 h-96 ">
           <img src="https://images.pexels.com/photos/17986132/pexels-photo-17986132/free-photo-of-aube-soleil-couchant-femme-lever-de-soleil.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image">
         </div>
       </div>
     </section>
 
-      <section class="portfolio h-screen flex items-center w-full bg-cover bg-center py-32 hover:bg-black-600" style="background-image: url('https://source.unsplash.com/random');">
+      <section class="portfolio h-screen flex items-center w-full bg-cover bg-center hover:bg-black-600" style="background-image: url('https://source.unsplash.com/random');">
         <div class="container__portfolio mx-auto text-center text-white">
           <h2>Portfolio</h2>
           <!-- <a href="#" class="bg-indigo-500 text-white py-4 px-12 rounded-full hover:bg-indigo-600">Portfolio</a> -->
@@ -60,12 +61,12 @@
       </section>
 
   <section class="apropos min-h-screen flex justify-center items-center"> 
-    <div class="container__apropos container-fuild grid grid-cols-2 border border-red-500 max-w-6xl h-auto mr-auto ml-auto justify-center items-center">
-        <div class="containerImage__apropos col-span-2 sm:col-span-1 border border-blue-500 h-96 flex justify-center items-center">
+    <div class="container__apropos container-fuild grid grid-cols-2 max-w-6xl h-auto mr-auto ml-auto justify-center items-center">
+        <div class="containerImage__apropos col-span-2 sm:col-span-1 h-96 flex justify-center items-center bg-black border border-white">
           <!-- <img src="https://images.pexels.com/photos/17986132/pexels-photo-17986132/free-photo-of-aube-soleil-couchant-femme-lever-de-soleil.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image"> -->
           <h2>À propos</h2>
         </div>
-        <div class="containerText__apropos col-span-2 sm:col-span-1 border border-cyan-500 h-96 mt-11 mb-11">
+        <div class="containerText__apropos col-span-2 sm:col-span-1 h-96 mt-11 mb-11">
           <p class="mt-11 mb-11">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur harum, blanditiis earum nisi ab eaque placeat delectus vel debitis, dicta laboriosam explicabo, minima provident sapiente modi eligendi sint nihil!</p>
           <button class="mt-11 mb-11">En savoir plus sur moi !</button>
           <button class="mt-11 mb-11">Contact</button>
@@ -73,10 +74,10 @@
     </div>
   </section>
 
-  <footer class="footer border border-red-700">
-    <div class="container__footer border border-blue-700 max-w-6xl mr-auto ml-auto text-center">
+  <footer class="footer">
+    <div class="container__footer max-w-6xl mr-auto ml-auto text-center">
       <button class="button--footer"><a href="">Me contacter</a></button>
-      <div class="ReseauxSociaux__footer border border-yellow-700">
+      <div class="ReseauxSociaux__footer">
         <i class="fab fa-github"></i>
         <i class="fab fa-linkedin"></i>
         <i class="fab fa-facebook-square"></i>
