@@ -9,7 +9,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <title>TP3</title>
-
   <!-- Liaison du manifest -->
   <link rel="manifest" href="./manifest.json">
   <!-- Manifest pour safari -->
@@ -19,6 +18,17 @@
   <link rel="apple-touch-icon" href="/TP3_MariamaDiaby/images/icones/maskable_icon_x128.png">
   <meta name="theme-color" content="#333030" />
   <meta name="description" content="Mon portfolio en application mobile">
+  <!-- Service worker pour autre navigateur -->
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service_worker.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+    });
+  }
+  </script>
 </head>
 <body>
 
