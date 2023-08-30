@@ -30,7 +30,7 @@
         "type": "image/png",
         "purpose" : "maskable"
     }],
-    "start_url": "index.html",
+    "start_url": "/TP3_MariamaDiaby/index.html",
     "display": "standalone",
     "background_color": "#333030",
     "theme_color": "#333030"
