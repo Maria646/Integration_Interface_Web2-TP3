@@ -6,7 +6,7 @@
 
 body {
   font-family: "arial";
-  background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030);
+  background-color: #000000;
 }
 body section {
   margin-top: 0%;
@@ -20,19 +20,12 @@ body footer {
   margin-left: 0%;
   margin-right: 0%;
 }
-body header {
-  background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030);
-}
-body .banner {
-  background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030);
-}
-body .banner .container__banner-photo {
-  border-radius: 50%;
-  background-image: linear-gradient(to bottom, rgba(227, 222, 222, 0.5), #333030);
+body .banner .container__banner-photo img {
+  opacity: 0.6;
 }
 body button {
-  background-color: #e3dede;
-  color: #333030;
+  background-color: #5A9367;
+  color: #000000;
   font-size: 15px;
   width: 100px;
   border: 1px solid #272625;

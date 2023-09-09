@@ -69,22 +69,22 @@
   
   body
     @include typoBoby("arial")
-    background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030)
+    background-color: #000000
     section
         @include margins(0% , 10%, 0%, 0%)
 
     footer
         @include margins(0% , 0%, 0%, 0%)
     header
-      background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030)
+      // background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030)
     .banner
-      background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030)
+      // background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030)
       .container__banner-photo
-        border-radius: 50%
-        background-image: linear-gradient(to bottom, rgba(227, 222, 222, 0.5), #333030)
+        img
+          opacity: 0.6
     
     button
-        @include buttons(#e3dede , #333030, 15px, 100px, 1px solid #272625 , 10px)
+        @include buttons(#5A9367 , #000000, 15px, 100px, 1px solid #272625 , 10px)
         @include margins(0px , 30px, 0px, 30px)
         @include paddings(10px , 10px, 10px, 10px)
         &:hover
