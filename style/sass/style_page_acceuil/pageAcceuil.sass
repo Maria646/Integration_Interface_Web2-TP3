@@ -1,127 +1,123 @@
 
-  @mixin typoBoby ($font-family) 
-    font-family: $font-family
-
-  @mixin typoH1 ($font-size, $font-family, $font-weight, $color) 
-    font-size: $font-size
-    font-family: $font-family
-    font-weight: $font-weight
-    color:$color
-  
-  @mixin typoH2 ($font-size, $font-family, $font-weight, $color) 
-    font-size: $font-size
-    font-family: $font-family
-    font-weight: $font-weight
-    color: $color
+@mixin typoBoby
+  font-family: $font-family
   
 
-  @mixin typoH3 ($font-size, $font-family, $font-weight, $color) 
-    font-size: $font-size
-    font-family: $font-family
-    font-weight: $font-weight
-    color: $color
+@mixin typoH1
+  font-family: "arial"
+  font-size: 90%
+  font-weight: 500
+  color: green
   
-  @mixin typoH4 ($font-size, $font-family, $font-weight, $color) 
-    font-size: $font-size
-    font-family: $font-family
-    font-weight: $font-weight
-    color: $color
-
-  @mixin typoH5 ($font-size, $font-family, $font-weight, $color) 
-    font-size: $font-size
-    font-family: $font-family
-    font-weight: $font-weight
-    color: $color
-
-  @mixin paragraphe ($font-size, $font-family, $font-weight, $color) 
-    font-size: $font-size
-    font-family: $font-family
-    font-weight: $font-weight
-    color: $color
+@mixin typoH2
+  font-size: 50px
+  font-family: "arial"
+  font-weight: 600
+  color: green
+  
+@mixin typoH3
+  font-size: 20px
+  font-family: "arial"
+  font-weight: 500
+  color: green
   
 
-  @mixin buttons ($colorBackground, $color, $font-size, $width, $border, $border-radius) 
-    background-color: $colorBackground
-    color: $color
-    font-size: $font-size
-    width: $width
-    border: $border
-    border-radius: $border-radius
+@mixin typoH4
+  font-size: 20px
+  font-family: "arial"
+  font-weight: 500
+  color: green
+  
+@mixin typoH5
+  font-size: 10px
+  font-family: "arial"
+  font-weight: 500
+  color: green
+  
 
-  @mixin paddings ($padding-top, $padding-bottom, $padding-left, $padding-right) 
+@mixin paragraphe
+  font-size: 10px
+  font-family: "arial"
+  font-weight: 500
+  color: green
+  
+@mixin buttons
+  background-color: green
+  color: white
+  font-size: 15px
+  border-radius: 20%
+  padding: 10px 20px 10px 20px
+  &:hover
+    background-color: white
+    color: gray
+
+@mixin liens
+  &:hover
+    background-color: white
+    color: gray
+  
+
+@mixin paddings($padding-top, $padding-bottom, $padding-left, $padding-right) 
     padding-top: $padding-top
     padding-bottom: $padding-bottom
     padding-left: $padding-left
     padding-right: $padding-right
   
-
-  @mixin margins ($margin-top, $margin-bottom, $margin-left, $margin-right) 
+@mixin margins($margin-top, $margin-bottom, $margin-left,$margin-right)
     margin-top: $margin-top
     margin-bottom: $margin-bottom
     margin-left: $margin-left
     margin-right: $margin-right
-  
 
-  *
-    margin: 0
-    padding: 0
-    box-sizing: border-box
-  
-  body
-    @include typoBoby("arial")
-    background-color: #000000
-    section
-        @include margins(0% , 10%, 0%, 0%)
 
-    footer
-        @include margins(0% , 0%, 0%, 0%)
-    header
-      // background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030)
-    .banner
-      // background-image: linear-gradient(to bottom, rgba(51, 48, 48, 0.7), #333030)
-      .container__banner-photo
-        img
-          opacity: 0.6
+body
+  h1
+    @include typoH1
+  h2
+    @include typoH2
+  h3
+    @include typoH3
+  h4
+    @include typoH4
+  h5
+    @include typoH5
+  button
+    @include buttons
+  a
+    @include liens
     
-    button
-        @include buttons(#5A9367 , #000000, 15px, 100px, 1px solid #272625 , 10px)
-        @include margins(0px , 30px, 0px, 30px)
-        @include paddings(10px , 10px, 10px, 10px)
-        &:hover
-          background-color: #333030
-          color: #e3dede
-        
-    
-    i
-      color: #e3dede
-      // background-color: #333030
-      &:hover
-        color: #333030
-        // background-color: #e3dede
-    a
-      color: #e3dede
-      
-    
-    p
-        @include paragraphe(15px, "arial", 400px, #e3dede)
-        @include margins(0px , 30px, 0px, 0px)
-    
-    h1
-        @include typoH1(40px, "arial", 400px,#e3dede)
-        @include margins(0px , 30px, 0px, 0px)
-    
-    h2
-        @include typoH2( 40px, "arial", 400px, #e3dede)
-        @include margins(0px , 30px, 0px, 0px)
-    
-    h3
-        @include typoH3( 20px, "arial", 400px,#e3dede)
-        @include margins(10px , 10px, 0px, 0px)
-    
-    h4
-        @include typoH4( 15px, "arial", 600px, #e3dede)
-        @include margins(0px , 30px, 0px, 0px)
-    
-    h5
-        @include typoH5( 15px, "arial", 400px, #e3dede)
-    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio
+  position: relative
+.container__portfolio::after
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(66, 66, 66, 0.274)
+
+.titre__portfolio
+  position: absolute
+  bottom: 45%
+  left: 36%
+  display: block
