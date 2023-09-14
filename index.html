@@ -34,19 +34,24 @@
 <body>
 
     <header class="header">
-      <div class="antialiased">
-        <div class="w-full">
-          <div x-data="{ open: true }" class="flex flex-col px-4  md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-            <div class="flex items-center justify-between p-4 mr-28">
-              <a href="#"class="">Mariama Diaby</a>
-              <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open ">
+      <!-- Container -->
+        <div class="container__header">
+          <!-- Container lien de navigation et manipulation hamburger -->
+          <div x-data="{ open: true }" class="containerManipuNavHamburger__header flex flex-col px-4  md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <!-- Container logo et button hamburger -->
+            <div class="containerLogoHamburger__header flex items-center justify-between p-4 sm:ml-3 sm:mr-3">
+              <!-- Logo -->
+              <h1><a href="#"class="logo__header" alt="logo">Mariama Diaby</a></h1>
+              <!-- Button hamburger -->
+              <button class="buttonHamburger__header rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                   <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                   <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                 </svg>
               </button>
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row ">
+            <!-- Liens de navigation -->
+            <nav :class="{'flex': open, 'hidden': !open}" class="navigation__header flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row ">
               <a class="px-4 py-2 mt-2 " href="index.html">Acceuil</a>
               <a class="px-4 py-2 mt-2" href="portfolio.html">Portfolio</a>
               <a class="px-4 py-2 mt-2" href="apropos.html">À propos</a>
@@ -57,27 +62,25 @@
             </nav>
           </div>
         </div>
-      </div>
     </header>
     
 
-<section class="banner flex justify-center items-center h-screen ">
-  <div class="container__banner container-fuild grid grid-cols-2 justify-center items-center ">
-    <div class="container__banner-text ml-10 col-span-2 sm:col-span-1 ">
+<section class="banner flex justify-center items-center h-screen">
+  <div class="container__banner container-fuild grid grid-cols-2 sm:pl-14">
+    <div class="container__banner-text col-span-2 sm:col-span-1">
       <h4 class="">Je me nomme <span>Mariama Diaby</span></h4>
       <h2 class="">Je suis développeur front-end junior</h2>
-      <button>Portfolio</button>
-      <button>Contact</button>
+      <button><a href="./portfolio.html">Portfolio</a></button>
+      <button><a href="./contact.html">Contact</a></button>
     </div>
-    <div class="container__banner-photo col-span-2 sm:col-span-1 flex justify-center items-center">
-      <img src="/images/photos/banner.jpg" alt="Image">
+    <div class="container__banner-photo col-span-2 sm:col-span-1">
+      <img src="/images/photos/banner.jpg" alt="Image" class="block h-full w-full object-cover object-center cursor-pointer">
     </div>
   </div>
 </section>
 
 
 <section class="portfolio">
-  <a href="">
     <div class="container__portfolio ">
       <div class="flex__portfolio flex flex-wrap ">
         <div class="w-1/2 max-h-xl border">
@@ -103,7 +106,6 @@
         </div>
     </div>
     </div>
-  </a>
     <div class="titre__portfolio">
       <h2 class=""><a href="">Portfolio</a></h2>
     </div>
@@ -113,10 +115,10 @@
 
 <section class="apropos min-h-screen flex justify-center items-center"> 
   <div class="container__apropos container-fuild grid grid-cols-2 justify-between items-center">
-      <div class="containerImage__apropos mr-10 col-span-2 sm:col-span-1  h-96 flex justify-center items-center border border-white-500">
+      <div class="containerImage__apropos col-span-2 sm:col-span-1 sm:mr-10 h-96 flex justify-center items-center border border-white-500">
         <h2>À propos</h2>
       </div>
-      <div class="containerText__apropos mr-10 col-span-2 sm:col-span-1">
+      <div class="containerText__apropos col-span-2 sm:col-span-1 sm:mr-10">
         <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consequatur harum, blanditiis earum nisi ab eaque placeat delectus vel debitis, dicta laboriosam explicabo, minima provident sapiente modi eligendi sint nihil!</p>
         <button class="">Plus sur moi !</button>
         <button class="">Contact</button>
