@@ -11,135 +11,86 @@
 <body>
 
   <header class="header">
-    <div class="antialiased">
-      <div class="w-full">
-        <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-          <div class="flex items-center justify-between p-4">
-            <a href="#" class="text-lg font-semibold tracking-widest uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Mariama Diaby</a>
-            <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+    <!-- Container -->
+      <div class="container__header">
+        <!-- Container lien de navigation et manipulation hamburger -->
+        <div x-data="{ open: true }" class="containerManipuNavHamburger__header flex flex-col px-4  md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+          <!-- Container logo et button hamburger -->
+          <div class="containerLogoHamburger__header flex items-center justify-between p-4 sm:ml-3 sm:mr-3">
+            <!-- Logo -->
+            <h1><a href="index.html"class="logo__header" alt="logo">Mariama Diaby</a></h1>
+            <!-- Button hamburger -->
+            <button class="buttonHamburger__header rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
               <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                 <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                 <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
               </svg>
             </button>
           </div>
-          <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">Acceuil</a>
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="portfolio.html">Portfolio</a>
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="apropos.html">À propos</a>
-            <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="contact.html">Contact</a>
-            <button @click="open = !open" class="flex flex-row text-gray-900 bg-gray-200 items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200">
+          <!-- Liens de navigation -->
+          <nav :class="{'flex': open, 'hidden': !open}" class="navigation__header flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row ">
+            <a class="px-4 py-2 mt-2 " href="index.html">Acceuil</a>
+            <a class="px-4 py-2 mt-2" href="portfolio.html">Portfolio</a>
+            <a class="px-4 py-2 mt-2" href="apropos.html">À propos</a>
+            <a class="px-4 py-2 mt-2" href="contact.html">Contact</a>
+            <a href="https://github.com/Maria646" class="px-4 py-2 mt-2">
               <i class="fab fa-github"></i>
-            </button> 
+            </a>
           </nav>
         </div>
       </div>
-    </div>
   </header>
 
-    <section class="galerie">
-        <div class="container__galerie mx-auto p-4">
-          <div class="containerText__galerie flex justify-center items-center">
-            <h1>Portfolio</h1>
-          </div>
-          <div class="grille__galerie grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="colonneOne__galerie grid gap-4">
-              <div class="containerImageOne__galerie">
-                <img
-                  class="h-auto max-w-full rounded-lg"
-                  src="https://pbs.twimg.com/media/FGRnP_TUUAAttG3?format=jpg&name=large"
-                  alt=""
-                />
-              </div>
-              <div class="containerImageTwo__galerie">
-                <img
-                  class="h-auto max-w-full rounded-lg"
-                  src="https://i.pinimg.com/originals/c0/7d/17/c07d17d7ca0b9f39f5aded4b6dca8f02.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="containerImageThree__galerie">
-                <img
-                  class="h-auto max-w-full rounded-lg"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Benares-_The_Golden_Temple%2C_India%2C_ca._1915_%28IMP-CSCNWW33-OS14-66%29.jpg/1280px-Benares-_The_Golden_Temple%2C_India%2C_ca._1915_%28IMP-CSCNWW33-OS14-66%29.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div class="colonneTwo__galerie grid gap-4">
-              <div class="containerImageFour__galerie">
-                <img
-                  class="h-auto max-w-full rounded-lg"
-                  src="https://www.jagranimages.com/images/newimg/27072020/27_07_2020-shri-kashi-vishwanath-temple_20557350.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="containerImageFive__galerie grid gap-4">
-                <img
-                  class="h-auto max-w-full rounded-lg"
-                  src="https://www.jansatta.com/wp-content/uploads/2021/12/Kashi-Vishwanath-Mandir.png?w=1024"
-                  alt=""
-                />
-              </div>
-              <div class="containerImageSix__galerie grid gap-4">
-                <img
-                  class="h-auto max-w-full rounded-lg"
-                  src="https://staticimg.amarujala.com/assets/images/2021/11/07/750x506/kashi-vishwanath-dham_1636258507.jpeg?w=674&dpr=1.0"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <section class="portfolio">
 
-      
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+    <div class="containerTitreCard__portfolio px-6 py-10 mx-auto max-w-7xl ">
+      <h2>Portfolio</h2>
+
+        <div class="containerCard__portfolio grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 ">
+
+            <div class="containerCardOne__portfolio lg:flex border border-gray-500">
+                <img class="photoOne__portfolio object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+
+                <div class="containerTitreButton__portfolio flex flex-col justify-between py-6 lg:mx-6">
+                  <h3>How to use sticky note for problem solving</h3>
+                  <button class ='buttonOne__portfolio inline-flex items-center shadow-md my-2 px-2 py-2 bg-green-900 text-gray-50 border-transparent
+                    rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
+                   focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out'>remove image</button>
+                </div>
+            </div>
+            <div class="containerCardTwo__portfolio lg:flex border border-gray-500">
+              <img class="photoTwo__portfolio object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+
+              <div class="containerTitreButton__portfolio flex flex-col justify-between py-6 lg:mx-6">
+                <h3>How to use sticky note for problem solving</h3>
+                <button class ='buttonTwo__portfolio inline-flex items-center shadow-md my-2 px-2 py-2 bg-green-900 text-gray-50 border-transparent
+                  rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
+                 focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out'>remove image</button>
+              </div>
+          </div>
+          <div class="containerCardThree__portfolio lg:flex border border-gray-500">
+            <img class="photoThree__portfolio  object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+
+            <div class="containerTitreButton__portfolio flex flex-col justify-between py-6 lg:mx-6 ">
+              <h3>How to use sticky note for problem solving</h3>
+              <button class ='buttonThree__portfolio inline-flex items-center shadow-md my-2 px-2 py-2 bg-green-900 text-gray-50 border-transparent
+                rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
+               focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out  '>remove image</button>
+            </div>
+        </div>
+        <div class="containerCardFour__portfolio lg:flex border border-gray-500">
+          <img class="photoFour__portfolio  object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+
+          <div class="containerTitreButton__portfolio  flex flex-col justify-between py-6 lg:mx-6">
+            <h3>How to use sticky note for problem solving</h3>
+            <button class ='buttonFour__portfolio inline-flex items-center shadow-md my-2 px-2 py-2 bg-green-900 text-gray-50 border-transparent
+              rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
+             focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out  '>remove image</button>
+          </div>
       </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-      </div>
-  </div>
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-      </div>
-  </div>
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-      </div>
-  </div>
-  <div class="grid gap-4">
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-      </div>
-      <div>
-          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-      </div>
-  </div>
-</div>
+        </div>
+    </div>
+</section>
 
 <footer class="footer">
   <div class="container__footer max-w-6xl mr-auto ml-auto text-center">

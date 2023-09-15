@@ -56,13 +56,7 @@ body i {
   margin-left: 0;
   margin-right: 0;
 }
-body footer {
-  padding-top: 40px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 10px;
-}
-body footer button {
+body button {
   background-color: green;
   color: white;
   font-size: 15px;
@@ -74,7 +68,13 @@ body footer button {
   margin-left: 0;
   margin-right: 0;
 }
-body footer button:hover {
+body button:hover {
   background-color: red;
   color: green;
+}
+body footer {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 10px;
 }
