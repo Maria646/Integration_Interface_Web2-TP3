@@ -43,48 +43,55 @@
           </div>
       </header>
     <section class="formulaire">
-        <div class="bg-gradient-to-b h-96"></div>
+        <div class="bg-gradient-to-b h-96">
+                <h2 class="titre__formulaire text-xl sm:text-3xl md:text-6xl mt-16 ml-56">Contact me</h2>
+        </div>
+        
         <div class="container__formulaire max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
-            <div class=" containerTitre__formulaire shadow rounded p-8 sm:p-12 -mt-72 border border-gray-200">
-                <h1 class="titre__formulaire text-3xl font-bold leading-7 text-center text-white">Contact me</h1>
+          
+            <div class="containerTitre__formulaire shadow rounded p-8 sm:p-12 -mt-72 border border-gray-200">
+              
                 <form class="form__formulaire" action="confirmationForm.html" method="post" onsubmit="return conditions()">
                     <div class="md:flex items-center mt-12">
-                        <div class="containerInputOne__formulaire w-full md:w-1/2 flex flex-col">
+                        <div class="containerInput__formulaire containerInputOne--formulaire w-full md:w-1/2 flex flex-col">
                             <label class="font-semibold leading-none text-gray-300">Name</label>
                             <input id="nom" type="text" class="leading-none text-gray-50 p-3 focus:outline-none focus:border-gray-800 mt-4 border-0 bg-gray-800 rounded" />
                             <div class="messageError"></div>
                         </div>
-                        <div class="containerInputTwo__formulaire w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                        <div class="containerInput__formulaire containerInputTwo--formulaire w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
                             <label class="font-semibold leading-none text-gray-300">Phone</label>
                             <input id="numero" type="number" class="leading-none text-gray-50 p-3 focus:outline-none focus:border-gray-800  mt-4 border-0 bg-gray-800 rounded"/>
                             <div class="messageError"></div>
                         </div>
                     </div>
                     <div>
-                        <div class="containerInputFour__formulaire w-full flex flex-col mt-8">
+                        <div class="containerInput__formulaire containerInputFour--formulaire w-full flex flex-col mt-8">
                             <label class="font-semibold leading-none text-gray-300">Message</label>
                             <textarea id="message" type="text" class="h-40 text-base leading-none text-gray-50 p-3 focus:outline-none focus:border-gray-800 -700 mt-4 bg-gray-800 border-0 rounded"></textarea>
                             <div class="messageError"></div>
                         </div>
                     </div>
-                    <div class="containerInputFive__formulaire flex items-center justify-center w-full">
+                    <div class="containerInputFive--formulaire flex items-center justify-center w-full">
                         <input type="submit" class="inputSend__formulaire mt-9 font-semibold leading-none text-white py-4 px-10 bg-slate-400 rounded hover:bg-red-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
                     </div>
                 </form>
             </div>
         </div>
     </section>
+
+    <hr>
     <footer class="footer">
-        <div class="container__footer max-w-6xl mr-auto ml-auto text-center">
-          <button class="button--footer"><a href="">Me contacter</a></button>
-          <div class="ReseauxSociaux__footer">
-            <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram-square"></i>
-          </div>
-          <h5>Mariama Diaby</h5>
+      <div class="container__footer max-w-6xl mr-auto ml-auto text-center">
+        <button class="button--footer"><a href="./contact.html">Me contacter</a></button>
+        <div class="ReseauxSociaux__footer">
+          <a href="https://github.com/Maria646"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mariama-diaby-833a4a185/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100088427980613"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.instagram.com/kizi_girlz/"><i class="fab fa-instagram-square"></i></a>
         </div>
-      </footer>
+        <h5>Mariama Diaby</h5>
+      </div>
+    </footer>
+
 </body>
 </html>

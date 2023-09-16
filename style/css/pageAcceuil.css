@@ -55,22 +55,35 @@ body i {
   margin-bottom: 30px;
   margin-left: 0;
   margin-right: 0;
+  color: rgba(0, 0, 0, 0.8431372549);
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 35px;
+}
+body i:hover {
+  vertical-align: middle;
+  color: #45a049;
 }
 body button {
-  background-color: green;
-  color: white;
-  font-size: 15px;
-  border-radius: 20%;
-  padding: 10px 20px 10px 20px;
-  margin-right: 30px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #4caf50;
+  padding: 10px 20px;
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: 0;
   margin-right: 0;
 }
 body button:hover {
-  background-color: red;
-  color: green;
+  background-color: #45a049;
+  transform: scale(1.1);
 }
 body footer {
   padding-top: 40px;
@@ -104,30 +117,4 @@ body footer {
 }
 .titre__portfolio h2 {
   padding: 10px 10px 0px 10px;
-}
-
-@media (max-width: 1000px) {
-  .container__banner-text, .titre__portfolio, .containerImage__apropos {
-    font-size: 40px;
-  }
-}
-@media (max-width: 950px) {
-  .container__banner-text h2 {
-    font-size: 38px;
-  }
-}
-@media (max-width: 700px) {
-  .container__banner-text h2, .titre__portfolio h2, .containerImage__apropos h2 {
-    font-size: 35px;
-  }
-}
-@media (max-width: 640px) {
-  .titre__portfolio, .containerImage__apropos {
-    width: 450px;
-  }
-}
-@media (max-width: 500px) {
-  .titre__portfolio {
-    width: 350px;
-  }
 }

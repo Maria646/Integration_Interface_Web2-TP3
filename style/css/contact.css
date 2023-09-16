@@ -55,26 +55,53 @@ body i {
   margin-bottom: 30px;
   margin-left: 0;
   margin-right: 0;
+  color: rgba(0, 0, 0, 0.8431372549);
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 35px;
+}
+body i:hover {
+  vertical-align: middle;
+  color: #45a049;
 }
 body button {
-  background-color: green;
-  color: white;
-  font-size: 15px;
-  border-radius: 20%;
-  padding: 10px 20px 10px 20px;
-  margin-right: 30px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #4caf50;
+  padding: 10px 20px;
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: 0;
   margin-right: 0;
 }
 body button:hover {
-  background-color: red;
-  color: green;
+  background-color: #45a049;
+  transform: scale(1.1);
 }
 body footer {
   padding-top: 40px;
   padding-bottom: 10px;
   padding-left: 40px;
   padding-right: 10px;
+}
+body .containerInput__formulaire input:focus {
+  outline: 0;
+}
+body .containerInput__formulaire .messageError {
+  color: red;
+  font-size: 9px;
+  height: 13px;
+}
+body .containerInput__formulaire .success input {
+  border-color: #45a049;
+}
+body .containerInput__formulaire .error input {
+  border-color: red;
 }
